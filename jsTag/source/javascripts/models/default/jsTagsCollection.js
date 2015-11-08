@@ -24,11 +24,11 @@ jsTag.factory('JSTagsCollection', ['JSTag', '$filter', function(JSTag, $filter) 
   // *** Object manipulation methods *** //
 
   // Adds a tag with received value
-  JSTagsCollection.prototype.addTag = function(value) {
+  JSTagsCollection.prototype.addTag = function(value, tagClass) {
     var tagIndex = this.tagsCounter;
     this.tagsCounter++;
 
-    var newTag = new JSTag(value, tagIndex);
+    var newTag = new JSTag(value, tagIndex, tagClass);
     this.tags[tagIndex] = newTag;
     angular.forEach(this._onAddListenerList, function (callback) {
       callback(newTag);
