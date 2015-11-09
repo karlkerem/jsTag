@@ -2,7 +2,7 @@
 * jsTag JavaScript Library - Editing tags based on angularJS 
 * Git: https://github.com/eranhirs/jsTag/tree/master
 * License: MIT (http://www.opensource.org/licenses/mit-license.php)
-* Compiled At: 11/08/2015 20:19
+* Compiled At: 11/09/2015 20:06
 **************************************************/
 'use strict';
 var jsTag = angular.module('jsTag', []);
@@ -718,7 +718,7 @@ angular.module("jsTag").run(["$templateCache", function($templateCache) {
     "    ng-switch=\"tagsCollection.isTagEdited(tag)\">\n" +
     "    <span\n" +
     "      ng-switch-when=\"false\"\n" +
-    "      class=\"jt-tag active-{{tagsCollection.isTagActive(tag)}} {{tagClass}}\">\n" +
+    "      class=\"jt-tag active-{{tagsCollection.isTagActive(tag)}} {{tag.tagClass}}\">\n" +
     "      <span\n" +
     "        class=\"value\"\n" +
     "        ng-click=\"tagsInputService.tagClicked(tag)\"\n" +

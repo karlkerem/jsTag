@@ -6,7 +6,7 @@
     ng-switch="tagsCollection.isTagEdited(tag)">
     <span
       ng-switch-when="false"
-      class="jt-tag active-{{tagsCollection.isTagActive(tag)}} {{tagClass}}">
+      class="jt-tag active-{{tagsCollection.isTagActive(tag)}} {{tag.tagClass}}">
       <span
         class="value"
         ng-click="tagsInputService.tagClicked(tag)"
